@@ -1,4 +1,4 @@
-package com.testAutomationCoach.aAbstraccion.Escuela;
+package com.testAutomationCoach.bVariables.Escuela;
 
 import sun.util.calendar.BaseCalendar;
 

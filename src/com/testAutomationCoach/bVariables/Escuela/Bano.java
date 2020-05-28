@@ -1,4 +1,4 @@
-package com.testAutomationCoach.aAbstraccion.Escuela;
+package com.testAutomationCoach.bVariables.Escuela;
 
 public class Bano {
     String identificador;
