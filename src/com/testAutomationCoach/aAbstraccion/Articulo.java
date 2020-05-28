@@ -2,6 +2,7 @@ package com.testAutomationCoach.aAbstraccion;
 
 public class Articulo {
 
+    public int existencia;
     //Atributos
     String nombre;
     String descripcion;
