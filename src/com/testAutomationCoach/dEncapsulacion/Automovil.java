@@ -11,7 +11,13 @@ public class Automovil {
 	private String tipoDeTransmision;
 	private int numDePuertas;
 	private int numDeLlantas;
-	
+
+	private int numRevoluciones;
+	private double litrosGasolina;
+	private double temperatura;
+
+
+
 	Automovil() {
 		marca = "Ford";
 		velocidadActual = 0.0;
@@ -19,6 +25,9 @@ public class Automovil {
 		tipoDeTransmision = "Manual";
 		numDePuertas = 2;
 		numDeLlantas = 4;
+		numRevoluciones = 0;
+		litrosGasolina = 15;
+		temperatura = 0.0;
 	}
 	
 	Automovil(String marca, double maximaVel, String tipoTransmision, int numPuertas, int numLlantas) {
@@ -30,23 +39,72 @@ public class Automovil {
 		this.numDeLlantas = numLlantas;
 	}
 	//comportamiento
+
+	public void encender(){
+	    this.numRevoluciones = 100;
+	    this.litrosGasolina -=0.05;
+	    this.temperatura +=2;
+
+	};
+	public void apagar(){
+        this.numRevoluciones = 0;
+        this.litrosGasolina -=0.05;
+        this.temperatura -=10;
+	};
+
 	public void acelerar() {
-		Input.print("run run\n");
-		this.velocidadActual += 5.0;
+	    if (numRevoluciones ==0.0){
+            System.out.println("El auto está apagado");
+        }
+	    else {
+            Input.print("run run\n");
+            this.velocidadActual += 5.0;
+            this.numRevoluciones += 1000;
+            this.litrosGasolina -= 0.01;
+            this.temperatura += 5.0;
+        }
 	}
 	
 	public void frenar() {
-		Input.print("Screeeeech!\n");
-		this.velocidadActual = 0;
+        if (numRevoluciones ==0.0){
+            System.out.println("El auto está apagado");
+        }
+        else {
+            Input.print("Screeeeech!\n");
+            this.velocidadActual = 0;
+            this.numRevoluciones -= 1000;
+            this.litrosGasolina -= 0.001;
+            this.temperatura += 0.01;
+        }
 	}
 	
 	public void retroceder() {
-		Input.print("piii piii piii piii\n");
-		this.velocidadActual -= -5;
+        if (numRevoluciones ==0.0){
+            System.out.println("El auto está apagado");
+        }
+        else {
+            Input.print("piii piii piii piii\n");
+            this.velocidadActual -= -5;
+            this.numRevoluciones += 1000;
+            this.litrosGasolina -= 0.01;
+            this.temperatura += 5.0;
+        }
 	}
 	
 	public double getVelocidad() {
 		return velocidadActual;
 		
+	}
+
+	public int getNumRevoluciones() {
+		return numRevoluciones;
+	}
+
+	public double getLitrosGasolina() {
+		return litrosGasolina;
+	}
+
+	public double getTemperatura() {
+		return temperatura;
 	}
 }
