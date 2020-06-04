@@ -6,8 +6,8 @@ public class DogArray {
     public static void main(String[] args) {
         Perro[] perrera;
         perrera = new Perro[12];
-        perrera[0] = new Perro();
-        perrera[1] = new Perro();
+        perrera[0] = new Perro(30, "doberman", "dobie1");
+        perrera[1] = new Perro(50, "San Bernardo", "Beethoven");
         System.out.println(perrera[2]);
         //inicializar el resto de los perros.
 

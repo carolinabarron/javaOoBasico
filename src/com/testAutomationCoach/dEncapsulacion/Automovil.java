@@ -37,18 +37,24 @@ public class Automovil {
 		this.tipoDeTransmision = tipoTransmision;
 		this.numDePuertas = numPuertas;
 		this.numDeLlantas = numLlantas;
+		numRevoluciones = 0;
+		litrosGasolina = 15;
+		temperatura = 0.0;
 	}
 	//comportamiento
 
 	public void encender(){
-	    this.numRevoluciones = 100;
-	    this.litrosGasolina -=0.05;
-	    this.temperatura +=2;
+			this.numRevoluciones = 1000;
+			this.litrosGasolina -= 0.05;
+			this.temperatura += 2;
+
+			System.out.println("El automovil no tiene gasolina, no se puede encender");
+
 
 	};
 	public void apagar(){
-        this.numRevoluciones = 0;
-        this.litrosGasolina -=0.05;
+        this.numRevoluciones -= 200;
+      //  this.litrosGasolina -=0.05;
         this.temperatura -=10;
 	};
 

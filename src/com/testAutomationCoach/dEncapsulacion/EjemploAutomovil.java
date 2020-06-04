@@ -8,6 +8,7 @@ public class EjemploAutomovil {
 		a1.acelerar();
 		a1.frenar();
 		a1.retroceder();
+		a1.frenar();
 		a1.apagar();
 
 		Automovil a2 = new Automovil("Chrysler", 250.0, "Automatico", 5, 4);
@@ -15,6 +16,7 @@ public class EjemploAutomovil {
 		a2.acelerar();
 		a2.frenar();
 		a2.retroceder();
+		a2.frenar();
 		a2.apagar();
 	}
 

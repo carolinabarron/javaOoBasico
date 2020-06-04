@@ -1,6 +1,6 @@
 package com.testAutomationCoach.eHerencia.animals;
 
-public class Gato extends Animal {
+public class Gato extends Felino {
 
     public void hacerRuido() {
         System.out.println("Miau");

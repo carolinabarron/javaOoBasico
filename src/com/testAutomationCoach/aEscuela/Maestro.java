@@ -1,12 +1,30 @@
 package com.testAutomationCoach.aEscuela;
 
-public class Maestro {
+public class Maestro extends Personal{
 
-    String nombre;
-    String apellidoPaterno;
-    String apellidoMaterno;
-    String titulo;
-    int edad;
     Materia[] clases;
-    char turno;
+
+    public Maestro(String nombre, String apellidoPaterno, String apellidoMaterno, int edad, String direccion, String departamento, String puesto, int numeroEmpleado, char turno, String gradoEscolar) {
+        super(nombre, apellidoPaterno, apellidoMaterno, edad, direccion, departamento, puesto, numeroEmpleado, turno, gradoEscolar);
+    }
+
+    public Maestro() {
+        super();
+    }
+
+    //Constructor
+  //  public Maestro(){
+//    }
+
 }
+
+
+/*
+
+
+String nombre, String apellidoPaterno, String apellidoMaterno,
+                    int edad, String direccion, String departamento, String puesto,
+                    int numeroEmpleado, char turno, String gradoEscolar){
+        super(nombre, apellidoPaterno, apellidoMaterno, edad, direccion);
+
+ */
